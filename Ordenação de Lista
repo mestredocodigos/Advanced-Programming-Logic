@@ -1,1 +1,18 @@
 Advanced Programming Logic
+'''
+Ordenação de Lista: Escreva um programa que peça
+ao usuário para inserir uma
+lista de números separados por vírgula e,
+em seguida, ordene os números em ordem crescente e
+exiba a lista ordenada.
+'''
+numero = input('numeros: ').split(',')
+
+inteiros = [int(num) for num in numero]
+for i in range(len(inteiros)):
+    menor_indice = i 
+    for j in range(i+1,len(inteiros)):
+        if inteiros[j] < inteiros[menor_indice]:
+            menor_indice=j
+    inteiros[i],inteiros[menor_indice]=inteiros[menor_indice],inteiros[i]
+print(inteiros)
