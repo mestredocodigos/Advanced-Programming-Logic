@@ -1,0 +1,27 @@
+'''
+Soma de Números Pares: Escreva um programa que 
+calcule a soma de todos os números pares de 1 a N, 
+onde N é fornecido pelo usuário.
+A pesar de ser um algoritmo MUITO simples trago uma questão interessante :
+Qual desses dois tem uma melhor perfomnance?
+O primeiro que utiliza sum ou o 2ª ?
+A resposta correta é o segundo. Porque no primeiro código ele cria uma lista de todos os números de 0 a numero e, 
+em seguida, filtra essa lista usando a compreensão de lista para incluir apenas os números pares antes de calcular a soma. 
+Isso pode ser ineficiente em termos de uso de memória, especialmente quando numero é grande.
+
+Pae, agora ja no segundo código ele calcula a soma apenas dos números pares diretamente durante o loop, sem criar uma lista intermediária.
+Isso economiza memória e é mais eficiente em termos de desempenho, especialmente quando n é grande.
+Em termos de eficiência, o segundo código é geralmente preferível ao primeiro quando se trata de calcular a soma de números pares. O sum é uma operação eficiente,
+mas evitar a criação da lista intermediária é o que torna o segundo código mais eficiente.
+'''
+
+numero = int(input('Digite um numero Inteiro: '))
+soma = sum([x for x in range(numero) if x%2==0])
+print(soma)
+
+n = int(input('Soma'))
+somar = 0
+for i in range(n):
+    if i % 2 ==0:
+        somar+=i
+print(somar)
