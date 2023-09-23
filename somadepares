@@ -2,7 +2,7 @@
 Soma de Números Pares: Escreva um programa que 
 calcule a soma de todos os números pares de 1 a N, 
 onde N é fornecido pelo usuário.
-A pesar de ser um algoritmo MUITO simples trago uma questão interessante :
+Apesar de ser um algoritmo MUITO simples trago uma questão interessante :
 Qual desses dois tem uma melhor perfomnance?
 O primeiro que utiliza sum ou o 2ª ?
 A resposta correta é o segundo. Porque no primeiro código ele cria uma lista de todos os números de 0 a numero e, 
