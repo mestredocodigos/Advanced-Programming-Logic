@@ -1,0 +1,27 @@
+'''
+Escreva um programa Python que conte quantas palavras únicas estão presentes em um texto fornecido.
+O programa deve ignorar maiúsculas e minúsculas, ou seja, 
+"Python" e "python" devem ser consideradas a mesma palavra.
+Além disso, o programa deve ignorar pontuações, como vírgulas, pontos e outros caracteres especiais,
+considerando apenas letras e números.
+'''
+import string
+
+text = input('Enter the text: ')
+
+words = text.split()
+cleaned_words = [word.strip(string.punctuation).lower() for word in words]
+
+unique_words = set()
+repeated_words = []
+
+for word in cleaned_words:
+    if word not in unique_words:
+        unique_words.add(word)
+    elif word not in repeated_words:
+        repeated_words.append(word)
+
+# Count the number of unique words
+
+print(f'Palavras unicas no texto : {num_unique_words}')
+print(f'Palavras repetidas s: {repeated_words}')
